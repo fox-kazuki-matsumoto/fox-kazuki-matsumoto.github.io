@@ -10,6 +10,29 @@
             gtag('js', new Date());
 
             gtag('config', 'UA-148810810-1');
+ga('send', 'pageview');
+
+ga('require', 'ecommerce');
+
+ga('ecommerce:addTransaction', {
+'id': '1234',
+'affiliation': 'Acme Clothing',
+'revenue': '1000',
+'shipping': '200',
+'tax': '160',
+'currency': 'JPY'
+});
+
+ga('ecommerce:addItem', {
+'id': '1234',
+'name': 'Fluffy Pink Bunnies',
+'sku': 'DD23444',
+'category': 'Party Toys',
+'price': '1000',
+'quantity': '1'
+});
+
+ga('ecommerce:send');
         </script>
     </head>
     <body>
